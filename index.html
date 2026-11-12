@@ -2,951 +2,726 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Noura Alotaibi | Computer Engineering Graduate Portfolio">
-<title>Noura Alotaibi | Computer Engineer</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --navy: #14243b;
-  --blue: #4776a7;
-  --light: #edf4fa;
-  --text: #26364a;
-  --muted: #6c7b8e;
-  --white: #ffffff;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: #f8fafc;
-  color: var(--text);
-  line-height: 1.7;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.container {
-  width: 88%;
-  max-width: 1150px;
-  margin: auto;
-}
-
-/* NAVIGATION */
-
-header {
-  background: rgba(255,255,255,0.96);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid #e8edf3;
-}
-
-nav {
-  min-height: 75px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.logo {
-  font-size: 21px;
-  font-weight: 800;
-  color: var(--navy);
-}
-
-.logo span {
-  color: var(--blue);
-}
-
-.nav-links {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--muted);
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: var(--blue);
-}
-
-/* HERO */
-
-.hero {
-  background: linear-gradient(120deg, #14243b, #294c70);
-  color: white;
-  padding: 115px 0;
-}
-
-.hero-content {
-  max-width: 760px;
-}
-
-.hero-tag {
-  color: #b8d8f5;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  font-size: clamp(38px, 6vw, 65px);
-  line-height: 1.15;
-  margin: 22px 0;
-}
-
-.hero h1 span {
-  color: #9bc5ed;
-}
-
-.hero p {
-  color: #d7e2ee;
-  max-width: 650px;
-  font-size: 16px;
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 13px 23px;
-  border-radius: 7px;
-  font-size: 13px;
-  font-weight: 700;
-  transition: 0.3s;
-}
-
-.btn-primary {
-  background: white;
-  color: var(--navy);
-}
-
-.btn-outline {
-  border: 1px solid #b9d3ed;
-  color: white;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  opacity: 0.9;
-}
-
-/* GENERAL SECTIONS */
-
-section {
-  padding: 85px 0;
-}
-
-.section-heading {
-  margin-bottom: 40px;
-}
-
-.section-heading .eyebrow {
-  color: var(--blue);
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.section-heading h2 {
-  color: var(--navy);
-  font-size: 32px;
-  margin: 8px 0;
-}
-
-.section-heading p {
-  color: var(--muted);
-  max-width: 650px;
-  font-size: 14px;
-}
-
-/* ABOUT */
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 35px;
-  align-items: start;
-}
-
-.about-text {
-  color: var(--muted);
-  font-size: 15px;
-}
-
-.info-card {
-  background: white;
-  border: 1px solid #e8edf3;
-  border-radius: 12px;
-  padding: 25px;
-}
-
-.info-card h3 {
-  color: var(--navy);
-  margin-bottom: 15px;
-}
-
-.info-card p {
-  font-size: 13px;
-  color: var(--muted);
-  margin: 10px 0;
-}
-
-/* EDUCATION */
-
-.education-card {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  border-left: 4px solid var(--blue);
-  box-shadow: 0 5px 20px rgba(20,36,59,0.04);
-}
-
-.education-card h3 {
-  color: var(--navy);
-  font-size: 20px;
-}
-
-.education-card p {
-  color: var(--muted);
-  font-size: 14px;
-  margin-top: 8px;
-}
-
-.gpa {
-  display: inline-block;
-  margin-top: 15px;
-  background: var(--light);
-  color: var(--blue);
-  padding: 7px 13px;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-/* SKILLS */
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.skill-card {
-  background: white;
-  border: 1px solid #e8edf3;
-  padding: 23px;
-  border-radius: 11px;
-}
-
-.skill-card h3 {
-  font-size: 16px;
-  color: var(--navy);
-  margin-bottom: 14px;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-tags span {
-  background: var(--light);
-  color: #385d80;
-  padding: 7px 10px;
-  border-radius: 5px;
-  font-size: 11px;
-  font-weight: 600;
-}
-
-/* PROJECTS */
-
-.projects-section {
-  background: #f0f5fa;
-}
-
-.projects-intro {
-  color: var(--muted);
-  font-size: 14px;
-  max-width: 700px;
-  margin-top: -25px;
-  margin-bottom: 35px;
-}
-
-.project-count {
-  display: inline-block;
-  margin-bottom: 28px;
-  background: white;
-  color: var(--blue);
-  border: 1px solid #dce7f1;
-  padding: 10px 16px;
-  border-radius: 7px;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.project-card {
-  background: white;
-  border: 1px solid #e4ebf2;
-  padding: 27px;
-  border-radius: 12px;
-  transition: 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(20,36,59,0.07);
-}
-
-.project-number {
-  color: var(--blue);
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.project-card h3 {
-  color: var(--navy);
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-.project-card p {
-  color: var(--muted);
-  font-size: 13px;
-  margin-bottom: 15px;
-}
-
-.project-tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-
-.project-tools span {
-  font-size: 10px;
-  color: #385d80;
-  background: var(--light);
-  padding: 6px 9px;
-  border-radius: 5px;
-  font-weight: 600;
-}
-
-.other-work {
-  margin-top: 28px;
-  background: var(--navy);
-  color: white;
-  padding: 30px;
-  border-radius: 12px;
-}
-
-.other-work h3 {
-  font-size: 19px;
-  margin-bottom: 10px;
-}
-
-.other-work p {
-  color: #d4e0ed;
-  font-size: 14px;
-}
-
-/* CERTIFICATIONS */
-
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 17px;
-}
-
-.cert-card {
-  background: white;
-  border: 1px solid #e6ecf2;
-  border-radius: 10px;
-  padding: 23px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.cert-card h3 {
-  color: var(--navy);
-  font-size: 15px;
-  margin-bottom: 8px;
-}
-
-.cert-card p {
-  color: var(--muted);
-  font-size: 12px;
-  margin-bottom: 15px;
-}
-
-.cert-link {
-  color: var(--blue);
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.cert-link:hover {
-  text-decoration: underline;
-}
-
-/* LANGUAGES */
-
-.language-box {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  display: flex;
-  gap: 35px;
-  flex-wrap: wrap;
-  border: 1px solid #e6ecf2;
-}
-
-.language-box p {
-  font-size: 14px;
-  color: var(--navy);
-  font-weight: 600;
-}
-
-/* CONTACT */
-
-.contact-section {
-  background: var(--navy);
-  color: white;
-  text-align: center;
-}
-
-.contact-section h2 {
-  font-size: 34px;
-  margin-bottom: 12px;
-}
-
-.contact-section p {
-  color: #d1deeb;
-  font-size: 14px;
-  margin-bottom: 25px;
-}
-
-.contact-details {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-  margin-bottom: 25px;
-}
-
-.contact-details a {
-  color: #c6def5;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-footer {
-  background: #101d30;
-  color: #aebdce;
-  text-align: center;
-  padding: 20px;
-  font-size: 11px;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 800px) {
-  .nav-links {
-    gap: 12px;
-    justify-content: flex-end;
-  }
-
-  .nav-links a {
-    font-size: 11px;
-  }
-
-  .about-grid,
-  .skills-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .container {
-    width: 90%;
-  }
-
-  nav {
-    padding: 15px 0;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .nav-links {
-    justify-content: flex-start;
-    gap: 13px;
-  }
-
-  .hero {
-    padding: 80px 0;
-  }
-
-  .hero p {
-    font-size: 14px;
-  }
-
-  section {
-    padding: 65px 0;
-  }
-
-  .section-heading h2 {
-    font-size: 27px;
-  }
-
-  .about-grid,
-  .skills-grid,
-  .projects-grid,
-  .cert-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-section h2 {
-    font-size: 27px;
-  }
-}
-  
-.certificate-image {
-  width: 100%;
-  height: 220px;
-  object-fit: contain;
-  background: #f0f5fa;
-  border-radius: 8px;
-  margin: 12px 0;
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nourah Alotaibi - Computer Engineering Graduate Portfolio">
+  <title>Nourah Alotaibi | Computer Engineering</title>
+
+  <style>
+    :root {
+      --navy: #10243e;
+      --blue: #2878c7;
+      --light-blue: #eaf3fc;
+      --text: #253449;
+      --muted: #66758a;
+      --white: #ffffff;
+      --background: #f5f8fc;
+      --border: #e1e8f0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: var(--navy);
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    nav ul a {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    nav ul a:hover {
+      color: var(--blue);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #10243e, #204d78);
+      color: white;
+      padding: 100px 0;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .hero-tag {
+      color: #a9d4ff;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.15;
+      margin: 18px 0;
+    }
+
+    .hero p {
+      color: #dce8f5;
+      font-size: 17px;
+      max-width: 650px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 22px;
+      border-radius: 7px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .btn-primary {
+      background: white;
+      color: var(--navy);
+    }
+
+    .btn-outline {
+      border: 1px solid #ffffff;
+      color: white;
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .about-card,
+    .info-card,
+    .project-card,
+    .skill-card,
+    .cert-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 5px 18px rgba(16, 36, 62, 0.04);
+    }
+
+    .about-card p {
+      color: var(--muted);
+    }
+
+    .education-grid,
+    .project-grid,
+    .skills-grid,
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .info-card h3,
+    .project-card h3,
+    .skill-card h3,
+    .cert-card h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .info-card p,
+    .project-card p,
+    .cert-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .gpa {
+      color: var(--blue);
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .project-card p {
+      margin-bottom: 15px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .tag {
+      background: var(--light-blue);
+      color: #205c96;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skill-card {
+      padding: 20px;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cert-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cert-card {
+      text-align: center;
+    }
+
+    .certificate-image {
+      width: 100%;
+      height: 240px;
+      object-fit: contain;
+      background: #f0f5fa;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin: 12px 0;
+      display: block;
+    }
+
+    .cert-link {
+      display: inline-block;
+      color: var(--blue);
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .cert-link:hover {
+      text-decoration: underline;
+    }
+
+    .languages {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .language-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 15px 25px;
+      color: var(--navy);
+      font-weight: bold;
+    }
+
+    .contact-box {
+      background: var(--navy);
+      color: white;
+      border-radius: 14px;
+      padding: 35px;
+    }
+
+    .contact-box p {
+      color: #dce8f5;
+      margin: 12px 0;
+    }
+
+    .contact-box a {
+      color: #a9d4ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav ul {
+        gap: 12px;
+      }
+
+      .education-grid,
+      .project-grid,
+      .skills-grid,
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="container">
-    <nav>
-      <a href="#home" class="logo">NOURA<span>.</span></a>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">Nourah Alotaibi</a>
 
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#certifications">Certificates</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </div>
-</header>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<!-- HERO -->
+  <main>
 
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-tag">Computer Engineering Graduate</div>
+    <div class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-tag">Computer Engineering Graduate</div>
 
-      <h1>
-        Hello, I'm<br>
-        <span>Noura Alotaibi.</span>
-      </h1>
+          <h1>Hello, I'm Nourah Alotaibi.</h1>
 
-      <p>
-        A Computer Engineering graduate passionate about
-        technology, software development, artificial
-        intelligence, and innovative engineering solutions.
-        Always interested in learning and building new things.
-      </p>
+          <p>
+            A Computer Engineering graduate from the American University
+            of the Middle East, interested in software development,
+            artificial intelligence, computer vision, cybersecurity,
+            and technology.
+          </p>
 
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">Explore My Work</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">Explore My Work</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">A little introduction</p>
 
-<section id="about">
-  <div class="container">
-    <div class="section-heading">
-      <div class="eyebrow">Introduction</div>
-      <h2>About Me</h2>
-      <p>Get to know me and my engineering background.</p>
-    </div>
+        <div class="about-card">
+          <p>
+            I am a Computer Engineering graduate with an interest in
+            building practical technology solutions. During my studies,
+            I worked on academic projects involving programming,
+            artificial intelligence, networking, embedded systems,
+            and hardware design. I enjoy learning new technologies,
+            solving problems, and improving my technical skills.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <div class="about-grid">
-      <div class="about-text">
-        <p>
-          I am a Computer Engineering graduate from the
-          American University of the Middle East (AUM),
-          with a strong academic background and a passion
-          for technology and problem-solving.
-          <br><br>
-          During my studies, I worked on various academic
-          and technical projects involving programming,
-          computer vision, artificial intelligence,
-          networking, cybersecurity, and hardware design.
-          <br><br>
-          I enjoy learning new technologies, developing
-          practical solutions, and improving my technical
-          skills. I am looking forward to starting my
-          professional career and contributing to a
-          dynamic engineering environment.
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">My academic background</p>
+
+        <div class="education-grid">
+          <div class="info-card">
+            <h3>Bachelor of Science in Computer Engineering</h3>
+            <p>American University of the Middle East (AUM)</p>
+            <p>Kuwait | 2026</p>
+            <p class="gpa">GPA: 3.894 / 4.00</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Academic Focus</h3>
+            <p>
+              Software Development, Artificial Intelligence,
+              Computer Vision, Cybersecurity, Computer Networks,
+              Digital Systems, and Embedded Systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">Technologies and tools I have worked with</p>
+
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <h3>Programming</h3>
+            <p>Python, Java, C</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Hardware Design</h3>
+            <p>VHDL, FPGA Design, Quartus Prime</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Artificial Intelligence</h3>
+            <p>Computer Vision, Face Recognition, OpenCV</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Cybersecurity</h3>
+            <p>Cybersecurity Fundamentals, Security Concepts</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Systems & Networking</h3>
+            <p>Linux, Networking Fundamentals, Cisco Packet Tracer</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Tools & Technologies</h3>
+            <p>SQL, MATLAB, Microsoft Excel, Raspberry Pi, Arduino</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Software Concepts</h3>
+            <p>Object-Oriented Programming, Multithreading, IPC</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects & Technical Work</h2>
+        <p class="section-subtitle">
+          Selected academic and technical projects
         </p>
-      </div>
 
-      <div class="info-card">
-        <h3>Quick Information</h3>
-        <p><strong>Degree:</strong> B.Sc. Computer Engineering</p>
-        <p><strong>University:</strong> AUM</p>
-        <p><strong>Graduation:</strong> 2026</p>
-        <p><strong>Location:</strong> Kuwait</p>
-        <p><strong>GPA:</strong> 3.894 / 4.0</p>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="project-grid">
 
-<!-- EDUCATION -->
+          <div class="project-card">
+            <h3>AI Attendance System Using Face Recognition</h3>
+            <p>
+              Developed a face recognition attendance system with
+              automated student identification and entry and exit
+              tracking using cameras and sensors.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">Raspberry Pi</span>
+              <span class="tag">Face Recognition</span>
+            </div>
+          </div>
 
-<section id="education" style="background:#f0f5fa;">
-  <div class="container">
-    <div class="section-heading">
-      <div class="eyebrow">Academic Background</div>
-      <h2>Education</h2>
-    </div>
+          <div class="project-card">
+            <h3>Hospital Management System</h3>
+            <p>
+              Developed a Java application with different user roles
+              and functions for managing hospital-related information.
+            </p>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">OOP</span>
+              <span class="tag">NetBeans</span>
+            </div>
+          </div>
 
-    <div class="education-card">
-      <h3>American University of the Middle East (AUM)</h3>
-      <p>Bachelor of Science in Computer Engineering</p>
-      <p>Kuwait | 2026</p>
-      <span class="gpa">GPA: 3.894 / 4.0</span>
-    </div>
-  </div>
-</section>
+          <div class="project-card">
+            <h3>Cinema Ticket Booking System</h3>
+            <p>
+              Created a Python application for cinema ticket booking
+              using object-oriented programming and file handling.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">OOP</span>
+              <span class="tag">File Handling</span>
+            </div>
+          </div>
 
-<!-- SKILLS -->
+          <div class="project-card">
+            <h3>IPC Named Pipes Project</h3>
+            <p>
+              Worked on inter-process communication using named pipes
+              and synchronization concepts in C.
+            </p>
+            <div class="tags">
+              <span class="tag">C</span>
+              <span class="tag">IPC</span>
+              <span class="tag">Pthreads</span>
+            </div>
+          </div>
 
-<section id="skills">
-  <div class="container">
-    <div class="section-heading">
-      <div class="eyebrow">What I Work With</div>
-      <h2>Technical Skills</h2>
-      <p>
-        Programming languages, engineering tools,
-        and technical knowledge developed through
-        academic work and projects.
-      </p>
-    </div>
+          <div class="project-card">
+            <h3>Smart Stick for Visually Impaired People</h3>
+            <p>
+              Designed an Arduino-based smart stick using sensors
+              and alerts to help detect nearby obstacles.
+            </p>
+            <div class="tags">
+              <span class="tag">Arduino</span>
+              <span class="tag">Sensors</span>
+              <span class="tag">Embedded Systems</span>
+            </div>
+          </div>
 
-    <div class="skills-grid">
+          <div class="project-card">
+            <h3>N-Puzzle Solver Using A*</h3>
+            <p>
+              Implemented an A* search algorithm to solve the N-Puzzle
+              problem using heuristic methods.
+            </p>
+            <div class="tags">
+              <span class="tag">C</span>
+              <span class="tag">A* Search</span>
+              <span class="tag">Algorithms</span>
+            </div>
+          </div>
 
-      <div class="skill-card">
-        <h3>Programming</h3>
-        <div class="skill-tags">
-          <span>Python</span>
-          <span>Java</span>
-          <span>C</span>
-          <span>VHDL</span>
-          <span>OOP</span>
-          <span>SQL</span>
+          <div class="project-card">
+            <h3>Computer Networking Project</h3>
+            <p>
+              Practiced network design, device configuration,
+              and connectivity using Cisco Packet Tracer.
+            </p>
+            <div class="tags">
+              <span class="tag">Networking</span>
+              <span class="tag">Cisco Packet Tracer</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <h3>MIPS Processor Simulation</h3>
+            <p>
+              Worked on processor-related design and simulation
+              using MIPS concepts and ModelSim.
+            </p>
+            <div class="tags">
+              <span class="tag">MIPS</span>
+              <span class="tag">ModelSim</span>
+              <span class="tag">Digital Systems</span>
+            </div>
+          </div>
+
         </div>
       </div>
+    </section>
 
-      <div class="skill-card">
-        <h3>Engineering & Design</h3>
-        <div class="skill-tags">
-          <span>FPGA Design</span>
-          <span>Quartus Prime</span>
-          <span>MATLAB</span>
-          <span>Arduino</span>
-          <span>Raspberry Pi</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h3>Computer Technologies</h3>
-        <div class="skill-tags">
-          <span>Linux</span>
-          <span>Networking</span>
-          <span>Cybersecurity</span>
-          <span>Computer Vision</span>
-          <span>Face Recognition</span>
-          <span>Excel</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-
-<section id="projects" class="projects-section">
-  <div class="container">
-
-    <div class="section-heading">
-      <div class="eyebrow">My Experience</div>
-      <h2>Projects & Technical Work</h2>
-    </div>
-
-    <p class="projects-intro">
-      Throughout my Computer Engineering studies,
-      I worked on more than 30 academic and technical
-      projects, assignments, and practical tasks.
-      Below are some of my selected projects.
-    </p>
-
-    <div class="project-count">30+ Academic & Technical Projects</div>
-
-    <h3 style="color:#14243b; margin-bottom:20px;">
-      Featured Projects
-    </h3>
-
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <div class="project-number">01 / Graduation Project</div>
-        <h3>AI Attendance System Using Face Recognition</h3>
-        <p>
-          Developed an AI-based attendance system using
-          face recognition to identify students and
-          automatically track entry and exit times.
+    <section id="certificates">
+      <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">
+          Professional learning and certificates
         </p>
-        <div class="project-tools">
-          <span>Python</span>
-          <span>OpenCV</span>
-          <span>Face Recognition</span>
-          <span>Raspberry Pi</span>
+
+        <div class="cert-grid">
+
+          <div class="cert-card">
+            <h3>Certificate 1</h3>
+            <img
+              src="images/IMG_4906.jpeg"
+              alt="Certificate 1"
+              class="certificate-image"
+              loading="lazy">
+            <a
+              href="https://www.coursera.org/account/accomplishments/professional-cert/ETD97L31JCDL"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cert-link">
+              View Certificate →
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <h3>Certificate 2</h3>
+            <img
+              src="images/IMG_4907.jpeg"
+              alt="Certificate 2"
+              class="certificate-image"
+              loading="lazy">
+            <a
+              href="https://www.coursera.org/account/accomplishments/verify/8SIUTFWYX508"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cert-link">
+              View Certificate →
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <h3>Certificate 3</h3>
+            <img
+              src="images/IMG_4908.jpeg"
+              alt="Certificate 3"
+              class="certificate-image"
+              loading="lazy">
+            <a
+              href="https://www.coursera.org/account/accomplishments/verify/WGOV2TNEYWYF"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cert-link">
+              View Certificate →
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <h3>Certificate 4</h3>
+            <img
+              src="images/IMG_4909.jpeg"
+              alt="Certificate 4"
+              class="certificate-image"
+              loading="lazy">
+            <a
+              href="https://www.coursera.org/account/accomplishments/verify/85CQNKQJVRE9"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cert-link">
+              View Certificate →
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <h3>Certificate 5</h3>
+            <img
+              src="images/IMG_4910.jpeg"
+              alt="Certificate 5"
+              class="certificate-image"
+              loading="lazy">
+            <a
+              href="https://www.coursera.org/account/accomplishments/verify/CJCH0A5XTKFE"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cert-link">
+              View Certificate →
+            </a>
+          </div>
+
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <div class="project-number">02 / Software Development</div>
-        <h3>Hospital Management System</h3>
-        <p>
-          Developed a Java application with different
-          user roles and functions for managing hospital
-          services and information.
-        </p>
-        <div class="project-tools">
-          <span>Java</span>
-          <span>OOP</span>
-          <span>NetBeans</span>
+    <section id="languages">
+      <div class="container">
+        <h2 class="section-title">Languages</h2>
+        <p class="section-subtitle">Communication</p>
+
+        <div class="languages">
+          <div class="language-item">Arabic</div>
+          <div class="language-item">English</div>
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <div class="project-number">03 / Python Programming</div>
-        <h3>Cinema Ticket Booking System</h3>
-        <p>
-          Created a Python application for booking cinema
-          tickets, applying object-oriented programming
-          and file handling.
-        </p>
-        <div class="project-tools">
-          <span>Python</span>
-          <span>OOP</span>
-          <span>File Handling</span>
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <h2>Let's Connect</h2>
+          <p>
+            I am open to new opportunities, professional connections,
+            and learning experiences.
+          </p>
+
+          <p>
+            Email:
+            <a href="mailto:nourahalotaibi.kwt@gmail.com">
+              nourahalotaibi.kwt@gmail.com
+            </a>
+          </p>
+
+          <p>
+            Phone:
+            <a href="tel:+96555521992">+965 55521992</a>
+          </p>
+
+          <p>Location: Kuwait</p>
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <div class="project-number">04 / Systems Programming</div>
-        <h3>IPC Named Pipes Project</h3>
-        <p>
-          Worked on inter-process communication using
-          named pipes and synchronization concepts
-          in C programming.
-        </p>
-        <div class="project-tools">
-          <span>C</span>
-          <span>IPC</span>
-          <span>Pthreads</span>
-          <span>FIFOs</span>
-        </div>
-      </div>
+  </main>
 
-      <div class="project-card">
-        <div class="project-number">05 / Embedded Systems</div>
-        <h3>Smart Stick for Visually Impaired People</h3>
-        <p>
-          Designed a smart stick using sensors and
-          alerts to help detect nearby obstacles
-          and support safer movement.
-        </p>
-        <div class="project-tools">
-          <span>Arduino</span>
-          <span>Ultrasonic Sensor</span>
-          <span>Embedded Systems</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-number">06 / Artificial Intelligence</div>
-        <h3>N-Puzzle Solver</h3>
-        <p>
-          Implemented search algorithms to solve
-          the N-Puzzle problem using heuristic
-          approaches and A* search.
-        </p>
-        <div class="project-tools">
-          <span>C</span>
-          <span>A* Algorithm</span>
-          <span>Heuristics</span>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="other-work">
-      <h3>Additional Academic & Technical Work</h3>
-      <p>
-        My experience also includes additional programming
-        assignments, digital logic designs, networking
-        simulations, processor simulations, laboratory
-        exercises, and technical experiments across
-        different areas of Computer Engineering.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-
-<section id="certifications">
-  <div class="container">
-    <div class="section-heading">
-      <div class="eyebrow">Continuous Learning</div>
-      <h2>Certifications</h2>
-      <p>
-        Professional learning and additional technical
-        knowledge through online courses and certificates.
-      </p>
-    </div>
-
-  
-<div class="cert-card">
-  <h3>Certificate 1</h3>
-  <img src="images/IMG_4906.jpeg" alt="Certificate 1" class="certificate-image">
-  <a href="https://www.coursera.org/account/accomplishments/professional-cert/ETD97L31JCDL" target="_blank" class="cert-link">View Certificate →</a>
-</div>
-
-<div class="cert-card">
-  <h3>Certificate 2</h3>
-  <img src="images/IMG_4907.jpeg" alt="Certificate 2" class="certificate-image">
-  <a href="https://www.coursera.org/account/accomplishments/verify/8SIUTFWYX508" target="_blank" class="cert-link">View Certificate →</a>
-</div>
-
-<div class="cert-card">
-  <h3>Certificate 3</h3>
-  <img src="images/IMG_4908.jpeg" alt="Certificate 3" class="certificate-image">
-  <a href="https://www.coursera.org/account/accomplishments/verify/WGOV2TNEYWYF" target="_blank" class="cert-link">View Certificate →</a>
-</div>
-
-<div class="cert-card">
-  <h3>Certificate 4</h3>
-  <img src="images/IMG_4909.jpeg" alt="Certificate 4" class="certificate-image">
-  <a href="https://www.coursera.org/account/accomplishments/verify/85CQNKQJVRE9" target="_blank" class="cert-link">View Certificate →</a>
-</div>
-
-<div class="cert-card">
-  <h3>Certificate 5</h3>
-  <img src="images/IMG_4910.jpeg" alt="Certificate 5" class="certificate-image">
-  <a href="https://www.coursera.org/account/accomplishments/verify/CJCH0A5XTKFE" target="_blank" class="cert-link">View Certificate →</a>
-</div>
-
-
-
-    </div>
-  </div>
-</section>
-
-<!-- LANGUAGES -->
-
-<section style="background:#f0f5fa;">
-  <div class="container">
-    <div class="section-heading">
-      <div class="eyebrow">Communication</div>
-      <h2>Languages</h2>
-    </div>
-
-    <div class="language-box">
-      <p>Arabic — Native</p>
-      <p>English — Fluent</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-
-<section class="contact-section" id="contact">
-  <div class="container">
-    <h2>Let's Connect</h2>
-    <p>
-      I am open to professional opportunities,
-      collaboration, and new learning experiences.
-    </p>
-
-    <div class="contact-details">
-      <a href="mailto:nourahalotaibi.kwt@gmail.com">
-        nourahalotaibi.kwt@gmail.com
-      </a>
-
-      <a href="tel:+96555521992">
-        +965 55521992
-      </a>
-    </div>
-
-    <a href="mailto:nourahalotaibi.kwt@gmail.com"
-       class="btn btn-primary">
-      Send Me an Email
-    </a>
-  </div>
-</section>
-
-<footer>
-  © 2026 Nourah Alotaibi. All Rights Reserved.
-</footer>
+  <footer>
+    © 2026 Nourah Alotaibi. All rights reserved.
+  </footer>
 
 </body>
 </html>

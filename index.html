@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Nourah Alotaibi - Computer Engineering Graduate Portfolio">
-  <title>Nourah Alotaibi | Computer Engineering</title>
+  <title>Nourah Alotaibi | Portfolio</title>
 
   <style>
     :root {
@@ -45,7 +45,7 @@
     }
 
     header {
-      background: var(--white);
+      background: white;
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
@@ -57,20 +57,23 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding: 12px 0;
     }
 
     .logo {
       color: var(--navy);
-      font-size: 21px;
+      font-size: 20px;
       font-weight: bold;
     }
 
     nav ul {
       display: flex;
       list-style: none;
-      gap: 22px;
+      gap: 18px;
       flex-wrap: wrap;
+      align-items: center;
     }
 
     nav ul a {
@@ -81,6 +84,13 @@
 
     nav ul a:hover {
       color: var(--blue);
+    }
+
+    .nav-cv {
+      background: var(--blue);
+      color: white;
+      padding: 8px 13px;
+      border-radius: 6px;
     }
 
     .hero {
@@ -134,7 +144,7 @@
     }
 
     .btn-outline {
-      border: 1px solid #ffffff;
+      border: 1px solid white;
       color: white;
     }
 
@@ -194,7 +204,7 @@
     }
 
     .gpa {
-      color: var(--blue);
+      color: var(--blue) !important;
       font-weight: bold;
       margin-top: 8px;
     }
@@ -309,7 +319,6 @@
 
     @media (max-width: 700px) {
       nav {
-        padding: 15px 0;
         align-items: flex-start;
         flex-direction: column;
       }
@@ -350,6 +359,13 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#certificates">Certificates</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="CV_Nourah_Alotaibi.pdf"
+               class="nav-cv"
+               download>
+              Download CV
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -368,12 +384,19 @@
             A Computer Engineering graduate from the American University
             of the Middle East, interested in software development,
             artificial intelligence, computer vision, cybersecurity,
-            and technology.
+            networking, and technology.
           </p>
 
           <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">Explore My Work</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
+            <a href="#projects" class="btn btn-primary">
+              Explore My Work
+            </a>
+
+            <a href="CV_Nourah_Alotaibi.pdf"
+               class="btn btn-outline"
+               download>
+              Download My CV ↓
+            </a>
           </div>
         </div>
       </div>
@@ -425,7 +448,9 @@
     <section id="skills">
       <div class="container">
         <h2 class="section-title">Technical Skills</h2>
-        <p class="section-subtitle">Technologies and tools I have worked with</p>
+        <p class="section-subtitle">
+          Technologies and tools I have worked with
+        </p>
 
         <div class="skills-grid">
 
@@ -596,81 +621,71 @@
         <div class="cert-grid">
 
           <div class="cert-card">
-            <h3>Certificate 1</h3>
-            <img
-              src="images/IMG_4906.jpeg"
-              alt="Certificate 1"
-              class="certificate-image"
-              loading="lazy">
-            <a
-              href="https://www.coursera.org/account/accomplishments/professional-cert/ETD97L31JCDL"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="cert-link">
+            <h3>Google Cybersecurity Professional Certificate</h3>
+            <img src="images/IMG_4906.jpeg"
+                 alt="Google Cybersecurity Certificate"
+                 class="certificate-image"
+                 loading="lazy">
+            <a href="https://www.coursera.org/account/accomplishments/professional-cert/ETD97L31JCDL"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="cert-link">
               View Certificate →
             </a>
           </div>
 
           <div class="cert-card">
-            <h3>Certificate 2</h3>
-            <img
-              src="images/IMG_4907.jpeg"
-              alt="Certificate 2"
-              class="certificate-image"
-              loading="lazy">
-            <a
-              href="https://www.coursera.org/account/accomplishments/verify/8SIUTFWYX508"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="cert-link">
+            <h3>Introduction to Artificial Intelligence</h3>
+            <img src="images/IMG_4907.jpeg"
+                 alt="IBM Artificial Intelligence Certificate"
+                 class="certificate-image"
+                 loading="lazy">
+            <a href="https://www.coursera.org/account/accomplishments/verify/8SIUTFWYX508"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="cert-link">
               View Certificate →
             </a>
           </div>
 
           <div class="cert-card">
-            <h3>Certificate 3</h3>
-            <img
-              src="images/IMG_4908.jpeg"
-              alt="Certificate 3"
-              class="certificate-image"
-              loading="lazy">
-            <a
-              href="https://www.coursera.org/account/accomplishments/verify/WGOV2TNEYWYF"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="cert-link">
+            <h3>AI for App Building</h3>
+            <img src="images/IMG_4908.jpeg"
+                 alt="Google AI for App Building Certificate"
+                 class="certificate-image"
+                 loading="lazy">
+            <a href="https://www.coursera.org/account/accomplishments/verify/WGOV2TNEYWYF"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="cert-link">
               View Certificate →
             </a>
           </div>
 
           <div class="cert-card">
-            <h3>Certificate 4</h3>
-            <img
-              src="images/IMG_4909.jpeg"
-              alt="Certificate 4"
-              class="certificate-image"
-              loading="lazy">
-            <a
-              href="https://www.coursera.org/account/accomplishments/verify/85CQNKQJVRE9"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="cert-link">
+            <h3>Introduction to Networking and Cloud Computing</h3>
+            <img src="images/IMG_4909.jpeg"
+                 alt="Microsoft Networking and Cloud Computing Certificate"
+                 class="certificate-image"
+                 loading="lazy">
+            <a href="https://www.coursera.org/account/accomplishments/verify/85CQNKQJVRE9"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="cert-link">
               View Certificate →
             </a>
           </div>
 
           <div class="cert-card">
-            <h3>Certificate 5</h3>
-            <img
-              src="images/IMG_4910.jpeg"
-              alt="Certificate 5"
-              class="certificate-image"
-              loading="lazy">
-            <a
-              href="https://www.coursera.org/account/accomplishments/verify/CJCH0A5XTKFE"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="cert-link">
+            <h3>Introduction to Computers and Operating Systems and Security</h3>
+            <img src="images/IMG_4910.jpeg"
+                 alt="Microsoft Computers and Operating Systems Certificate"
+                 class="certificate-image"
+                 loading="lazy">
+            <a href="https://www.coursera.org/account/accomplishments/verify/CJCH0A5XTKFE"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="cert-link">
               View Certificate →
             </a>
           </div>
@@ -685,8 +700,8 @@
         <p class="section-subtitle">Communication</p>
 
         <div class="languages">
-          <div class="language-item">Arabic</div>
-          <div class="language-item">English</div>
+          <div class="language-item">Arabic – Native</div>
+          <div class="language-item">English – Fluent</div>
         </div>
       </div>
     </section>
@@ -713,6 +728,12 @@
           </p>
 
           <p>Location: Kuwait</p>
+
+          <p>
+            <a href="CV_Nourah_Alotaibi.pdf" download>
+              Download My CV ↓
+            </a>
+          </p>
         </div>
       </div>
     </section>

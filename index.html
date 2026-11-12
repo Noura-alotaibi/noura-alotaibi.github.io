@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nourah Alotaibi - Computer Engineering Graduate Portfolio">
+<title>Nourah Alotaibi | Computer Engineer</title>
+
+<style>
+:root {
+  --navy: #172b46;
+  --blue: #527ba9;
+  --light: #f4f7fb;
+  --text: #26364b;
+  --muted: #718096;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav {
+  background: rgba(255,255,255,.96);
+  padding: 19px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #e7edf4;
+}
+
+.logo {
+  color: var(--navy);
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  font-size: 13px;
+  color: #526176;
+  transition: .2s;
+}
+
+.nav-links a:hover {
+  color: var(--blue);
+}
+
+.hero {
+  padding: 115px 10%;
+  background: linear-gradient(120deg,#edf3fa,#ffffff);
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.eyebrow {
+  color: var(--blue);
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(43px,7vw,72px);
+  line-height: 1.12;
+  color: var(--navy);
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: var(--blue);
+}
+
+.hero p {
+  max-width: 650px;
+  color: #627187;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--navy);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 10px;
+  transition: .2s;
+}
+
+.button:hover {
+  background: var(--blue);
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid #b9c8d9;
+}
+
+section {
+  padding: 80px 10%;
+  scroll-margin-top: 75px;
+}
+
+.section-label {
+  color: var(--blue);
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--navy);
+  font-size: 32px;
+  margin: 8px 0 25px;
+}
+
+.about-text {
+  max-width: 800px;
+  color: #627187;
+  font-size: 16px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.stat {
+  background: white;
+  padding: 23px;
+  border: 1px solid #e4ebf3;
+  border-radius: 9px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 26px;
+  color: var(--navy);
+}
+
+.stat span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.education {
+  background: white;
+}
+
+.info-card {
+  background: var(--light);
+  padding: 27px;
+  border-radius: 9px;
+  border-left: 4px solid var(--blue);
+  max-width: 750px;
+}
+
+.info-card h3 {
+  color: var(--navy);
+  font-size: 19px;
+}
+
+.info-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.gpa {
+  display: inline-block;
+  margin-top: 13px;
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.projects {
+  background: var(--light);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #e5ebf2;
+  border-radius: 10px;
+  padding: 27px;
+  transition: .25s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(28,50,80,.07);
+}
+
+.project-number {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.project-card h3 {
+  color: var(--navy);
+  font-size: 19px;
+  margin: 12px 0;
+}
+
+.project-card p {
+  color: #718096;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.tags span {
+  background: #edf3fa;
+  color: #42658b;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.certifications {
+  background: white;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 17px;
+}
+
+.cert-card {
+  padding: 23px;
+  background: #f7f9fc;
+  border: 1px solid #e5ebf2;
+  border-radius: 9px;
+}
+
+.cert-card .provider {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.cert-card h3 {
+  color: var(--navy);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.cert-card p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.skills {
+  background: var(--light);
+}
+
+.skill-group {
+  margin: 25px 0;
+}
+
+.skill-group h3 {
+  color: var(--navy);
+  font-size: 16px;
+  margin-bottom: 13px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-list span {
+  padding: 9px 16px;
+  background: white;
+  border: 1px solid #e1e8f0;
+  border-radius: 5px;
+  color: #52647b;
+  font-size: 13px;
+}
+
+.languages {
+  background: white;
+}
+
+.language-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.language {
+  background: var(--light);
+  padding: 15px 24px;
+  border-radius: 7px;
+  min-width: 140px;
+}
+
+.language strong {
+  display: block;
+  color: var(--navy);
+}
+
+.language span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.contact {
+  background: #edf3fa;
+}
+
+.contact p {
+  color: #65758a;
+  margin-bottom: 12px;
+}
+
+.contact a {
+  color: var(--blue);
+}
+
+footer {
+  background: var(--navy);
+  text-align: center;
+  color: #d7e1ed;
+  padding: 27px;
+  font-size: 13px;
+}
+
+@media(max-width:700px) {
+  nav {
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .nav-links {
+    gap: 13px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 85px 8%;
+  }
+
+  section {
+    padding: 65px 8%;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">Noura Alotaibi.</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certificates</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <span class="eyebrow">COMPUTER ENGINEERING GRADUATE</span>
+    <h1>Hello, I'm <span>Nourah.</span></h1>
+    <p>
+      A Computer Engineering graduate passionate about
+      software development, artificial intelligence,
+      computer vision, and cybersecurity.
+      I enjoy building practical solutions and exploring
+      new technologies.
+    </p>
+    <a href="#projects" class="button">Explore My Work</a>
+    <a href="#contact" class="button button-outline">Contact Me</a>
+  </div>
+</header>
+
+<section id="about">
+  <span class="section-label">INTRODUCTION</span>
+  <h2>About Me</h2>
+  <p class="about-text">
+    I am a Computer Engineering graduate from the
+    American University of the Middle East (AUM), Kuwait.
+    With a strong academic background and hands-on
+    experience in software and engineering projects,
+    I have developed skills in programming, computer
+    vision, cybersecurity, networking, and FPGA design.
+    I am passionate about problem-solving, continuous
+    learning, and applying technology to real-world
+    challenges.
+  </p>
+
+  <div class="stats">
+    <div class="stat">
+      <strong>3.894 / 4.0</strong>
+      <span>Academic GPA</span>
+    </div>
+    <div class="stat">
+      <strong>2026</strong>
+      <span>Graduation Year</span>
+    </div>
+    <div class="stat">
+      <strong>5</strong>
+      <span>Academic Projects</span>
+    </div>
+    <div class="stat">
+      <strong>5</strong>
+      <span>Professional Certificates</span>
+    </div>
+  </div>
+</section>
+
+<section class="education" id="education">
+  <span class="section-label">ACADEMIC BACKGROUND</span>
+  <h2>Education</h2>
+
+  <div class="info-card">
+    <h3>Bachelor of Science in Computer Engineering</h3>
+    <p>American University of the Middle East (AUM)</p>
+    <p>Kuwait | 2026</p>
+    <span class="gpa">GPA: 3.894 / 4.0</span>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <span class="section-label">WHAT I HAVE BUILT</span>
+  <h2>Academic Projects</h2>
+
+  <div class="project-grid">
+
+    <article class="project-card">
+      <span class="project-number">PROJECT 01 · GRADUATION PROJECT</span>
+      <h3>AI Attendance System Using Face Recognition</h3>
+      <p>
+        Developed an AI-based attendance system using
+        face recognition technology. Implemented real-time
+        student entry and exit tracking with automated
+        attendance management using camera input and
+        Raspberry Pi hardware.
+      </p>
+      <div class="tags">
+        <span>Python</span>
+        <span>Computer Vision</span>
+        <span>Face Recognition</span>
+        <span>Raspberry Pi</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <span class="project-number">PROJECT 02</span>
+      <h3>Hospital Management System</h3>
+      <p>
+        Developed a Java-based hospital management
+        application with role-based functionalities
+        for different users, including patients,
+        doctors, and facility management.
+      </p>
+      <div class="tags">
+        <span>Java</span>
+        <span>OOP</span>
+        <span>NetBeans</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <span class="project-number">PROJECT 03</span>
+      <h3>Cinema Ticket Booking System</h3>
+      <p>
+        Built a Python-based cinema booking application
+        using object-oriented programming and file
+        handling to manage booking information.
+      </p>
+      <div class="tags">
+        <span>Python</span>
+        <span>OOP</span>
+        <span>File Handling</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <span class="project-number">PROJECT 04</span>
+      <h3>IPC Named Pipes Project</h3>
+      <p>
+        Implemented inter-process communication using
+        named pipes and FIFO mechanisms, with
+        multithreading and synchronization techniques.
+      </p>
+      <div class="tags">
+        <span>C</span>
+        <span>pthread</span>
+        <span>IPC</span>
+        <span>Semaphores</span>
+        <span>FIFO</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <span class="project-number">PROJECT 05</span>
+      <h3>Smart Stick for the Visually Impaired</h3>
+      <p>
+        Developed an Arduino-based obstacle detection
+        system using ultrasonic sensors, a buzzer,
+        and LED alerts to help users detect nearby
+        obstacles.
+      </p>
+      <div class="tags">
+        <span>Arduino</span>
+        <span>Ultrasonic Sensors</span>
+        <span>Embedded Systems</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="certifications" id="certifications">
+  <span class="section-label">CONTINUOUS LEARNING</span>
+  <h2>Certifications</h2>
+
+  <div class="cert-grid">
+
+    <div class="cert-card">
+      <span class="provider">GOOGLE · COURSERA</span>
+      <h3>Google Cybersecurity Professional Certificate</h3>
+      <p>Cybersecurity fundamentals, security tools,
+      Linux, SQL, Python, and security analysis.</p>
+    </div>
+
+    <div class="cert-card">
+      <span class="provider">IBM</span>
+      <h3>Introduction to Artificial Intelligence (AI)</h3>
+      <p>Introduction to AI concepts and applications.</p>
+    </div>
+
+    <div class="cert-card">
+      <span class="provider">GOOGLE</span>
+      <h3>AI for App Building</h3>
+      <p>Exploring artificial intelligence in application development.</p>
+    </div>
+
+    <div class="cert-card">
+      <span class="provider">MICROSOFT</span>
+      <h3>Introduction to Networking and Cloud Computing</h3>
+      <p>Fundamentals of networking and cloud technologies.</p>
+    </div>
+
+    <div class="cert-card">
+      <span class="provider">MICROSOFT</span>
+      <h3>Introduction to Computers and Operating Systems and Security</h3>
+      <p>Computer systems, operating systems, and security fundamentals.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <span class="section-label">TECHNICAL EXPERTISE</span>
+  <h2>Technical Skills</h2>
+
+  <div class="skill-group">
+    <h3>Programming Languages</h3>
+    <div class="skill-list">
+      <span>Python</span>
+      <span>Java</span>
+      <span>C</span>
+      <span>VHDL</span>
+      <span>SQL</span>
+    </div>
+  </div>
+
+  <div class="skill-group">
+    <h3>Engineering & Technology</h3>
+    <div class="skill-list">
+      <span>Computer Vision</span>
+      <span>Face Recognition</span>
+      <span>FPGA Design</span>
+      <span>Networking</span>
+      <span>Cybersecurity</span>
+      <span>Inter-Process Communication</span>
+      <span>Multithreading</span>
+    </div>
+  </div>
+
+  <div class="skill-group">
+    <h3>Tools & Software</h3>
+    <div class="skill-list">
+      <span>Linux</span>
+      <span>Quartus Prime</span>
+      <span>Raspberry Pi</span>
+      <span>Arduino</span>
+      <span>MATLAB</span>
+      <span>Microsoft Excel</span>
+    </div>
+  </div>
+</section>
+
+<section class="languages">
+  <span class="section-label">COMMUNICATION</span>
+  <h2>Languages</h2>
+
+  <div class="language-row">
+    <div class="language">
+      <strong>Arabic</strong>
+      <span>Native</span>
+    </div>
+    <div class="language">
+      <strong>English</strong>
+      <span>Fluent</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <span class="section-label">GET IN TOUCH</span>
+  <h2>Let's Connect</h2>
+  <p>Open to learning, professional growth, and new opportunities.</p>
+  <p><strong>Email:</strong>
+    <a href="mailto:nourahalotaibi.kwt@gmail.com">
+      nourahalotaibi.kwt@gmail.com
+    </a>
+  </p>
+  <p><strong>Phone:</strong> +965 55521992</p>
+  <p><strong>Location:</strong> Kuwait</p>
+  <p><strong>GitHub:</strong>
+    <a href="https://github.com/Noura-alotaibi" target="_blank">
+      Noura-alotaibi
+    </a>
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 Nourah Alotaibi. All Rights Reserved.</p>
+  <p>Computer Engineering Portfolio</p>
+</footer>
+
+</body>
+</html>
